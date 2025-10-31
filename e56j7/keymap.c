@@ -15,7 +15,9 @@ enum custom_keycodes {
 
 
 
-#define DUAL_FUNC_0 LT(13, KC_I)
+#define DUAL_FUNC_0 LT(1, KC_F7)
+#define DUAL_FUNC_1 LT(10, KC_F16)
+#define DUAL_FUNC_2 LT(15, KC_F7)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -44,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 DE_Z,           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_A,           KC_TRANSPARENT, KC_TRANSPARENT, KC_F,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, DE_Y,           KC_X,           KC_C,           KC_V,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+                                                    KC_TRANSPARENT, DUAL_FUNC_1,                                    DUAL_FUNC_2,    KC_TRANSPARENT
   ),
 };
 
@@ -140,6 +142,36 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           register_code16(KC_LEFT_ALT);
         } else {
           unregister_code16(KC_LEFT_ALT);
+        }  
+      }  
+      return false;
+    case DUAL_FUNC_1:
+      if (record->tap.count > 0) {
+        if (record->event.pressed) {
+          register_code16(KC_ENTER);
+        } else {
+          unregister_code16(KC_ENTER);
+        }
+      } else {
+        if (record->event.pressed) {
+          layer_move(1);
+        } else {
+          layer_move(1);
+        }  
+      }  
+      return false;
+    case DUAL_FUNC_2:
+      if (record->tap.count > 0) {
+        if (record->event.pressed) {
+          register_code16(KC_TAB);
+        } else {
+          unregister_code16(KC_TAB);
+        }
+      } else {
+        if (record->event.pressed) {
+          layer_move(1);
+        } else {
+          layer_move(1);
         }  
       }  
       return false;
