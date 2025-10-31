@@ -189,7 +189,6 @@ const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, 	L
 const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, 	KC_GRV);
 const key_override_t semicolon_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_SCLN, 	LSFT(KC_DOT));
 const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_QUOT, 	LSFT(KC_2));
-const key_override_t backslash_key_override = ko_make_basic(MOD_MASK_SHIFT, DUAL_FUNC_0, 	RALT(KC_NUBS));
 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
@@ -199,5 +198,5 @@ const key_override_t *key_overrides[] = {
 	&comma_key_override,
 	&semicolon_key_override,
   &quot_key_override,
-  &backslash_key_override,
 };
+
