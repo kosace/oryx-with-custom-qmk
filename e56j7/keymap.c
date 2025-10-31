@@ -11,8 +11,8 @@ enum custom_keycodes {
   HSV_0_255_255,
   HSV_74_255_255,
   HSV_169_255_255,
+  COPY_MACRO
 };
-
 
 
 #define DUAL_FUNC_0 LT(2, KC_9)
@@ -122,11 +122,14 @@ bool rgb_matrix_indicators_user(void) {
 }
 
 
-
-
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+    case COPY_MACRO:
+      if (record->event.pressed) {
+
+      SEND_STRING(SS_LGUI(SS_TAP(X_C)));
+      }
+      return false;
 
     case DUAL_FUNC_0:
       if (record->tap.count > 0) {
@@ -177,6 +180,7 @@ const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, 	L
 const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, 	KC_NUBS);
 const key_override_t semicolon_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_SCLN, 	LSFT(KC_DOT));
 const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_QUOT, 	LSFT(KC_2));
+const key_override_t copy_override = ko_make_basic(MOD_MASK_LGUI, KC_C, COPY_MACRO);
 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
@@ -186,5 +190,6 @@ const key_override_t *key_overrides[] = {
 	&comma_key_override,
 	&semicolon_key_override,
   &quot_key_override,
+  &copy_override,
 };
 
