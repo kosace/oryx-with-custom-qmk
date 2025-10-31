@@ -175,14 +175,14 @@ const key_override_t semicolon_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_S
 const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_QUOT, 	LSFT(KC_2));
 
 // mac 
-const key_override_t copy_override = ko_make_basic(MOD_MASK_CTRL, KC_C, LGUI(KC_C));
-const key_override_t paste_override = ko_make_basic(MOD_MASK_CTRL, KC_V, LGUI(KC_V));
-const key_override_t cut_override = ko_make_basic(MOD_MASK_CTRL, KC_X, LGUI(KC_X));
-const key_override_t select_override = ko_make_basic(MOD_MASK_CTRL, KC_A, LGUI(KC_A));
-const key_override_t find_override = ko_make_basic(MOD_MASK_CTRL, KC_F, LGUI(KC_F));
-const key_override_t undo_override = ko_make_basic(MOD_MASK_CTRL, DE_Z, LGUI(DE_Z));
-const key_override_t redo_override = ko_make_basic(MOD_MASK_CTRL, DE_Y, S(LGUI(DE_Z)));
-const key_override_t save_override = ko_make_basic(MOD_MASK_CTRL, KC_S, LGUI(KC_S));
+const key_override_t copy_override = ko_make_with_layers(MOD_MASK_CTRL, KC_C, LGUI(KC_C), 3);
+const key_override_t paste_override = ko_make_with_layers(MOD_MASK_CTRL, KC_V, LGUI(KC_V), 3);
+const key_override_t cut_override = ko_make_with_layers(MOD_MASK_CTRL, KC_X, LGUI(KC_X), 3);
+const key_override_t select_override = ko_make_with_layers(MOD_MASK_CTRL, KC_A, LGUI(KC_A), 3);
+const key_override_t find_override = ko_make_with_layers(MOD_MASK_CTRL, KC_F, LGUI(KC_F), 3);
+const key_override_t undo_override = ko_make_with_layers(MOD_MASK_CTRL, DE_Z, LGUI(DE_Z), 3);
+const key_override_t redo_override = ko_make_with_layers(MOD_MASK_CTRL, DE_Y, S(LGUI(DE_Z)), 3);
+const key_override_t save_override = ko_make_with_layers(MOD_MASK_CTRL, KC_S, LGUI(KC_S), 3);
 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
