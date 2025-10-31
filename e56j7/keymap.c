@@ -181,7 +181,7 @@ const key_override_t cut_override = ko_make_basic(MOD_MASK_CTRL, KC_X, LGUI(KC_X
 const key_override_t select_override = ko_make_basic(MOD_MASK_CTRL, KC_A, LGUI(KC_A));
 const key_override_t find_override = ko_make_basic(MOD_MASK_CTRL, KC_F, LGUI(KC_F));
 const key_override_t undo_override = ko_make_basic(MOD_MASK_CTRL, DE_Z, LGUI(DE_Z));
-const key_override_t redo_override = ko_make_basic(MOD_MASK_CTRL, DE_Y, LGUI(DE_Y));
+const key_override_t redo_override = ko_make_basic(MOD_MASK_CTRL, DE_Y, S(LGUI(DE_Z)));
 const key_override_t save_override = ko_make_basic(MOD_MASK_CTRL, KC_S, LGUI(KC_S));
 
 // This globally defines all key overrides to be used
