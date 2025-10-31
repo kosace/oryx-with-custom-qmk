@@ -11,11 +11,11 @@ enum custom_keycodes {
   HSV_0_255_255,
   HSV_74_255_255,
   HSV_169_255_255,
-  // COPY_MACRO
+  COPY_MACRO_TEST
 };
 
 
-#define COPY_MACRO_TEST 1
+// #define COPY_MACRO_TEST 1
 #define DUAL_FUNC_0 LT(2, KC_9)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -126,11 +126,11 @@ bool rgb_matrix_indicators_user(void) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case COPY_MACRO_TEST:
-      if (record->event.pressed) {
+      // if (record->event.pressed) {
 
       // SEND_STRING(SS_LGUI(SS_TAP(X_C)));
       SEND_STRING("test");
-      }
+      // }
       return false;
 
     case DUAL_FUNC_0:
