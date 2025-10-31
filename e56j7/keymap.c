@@ -11,7 +11,7 @@ enum custom_keycodes {
   HSV_0_255_255,
   HSV_74_255_255,
   HSV_169_255_255,
-  COPY_MACRO
+  // COPY_MACRO
 };
 
 
@@ -125,7 +125,7 @@ bool rgb_matrix_indicators_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case COPY_MACRO:
+    case COPY_MACRO_TEST:
       if (record->event.pressed) {
 
       // SEND_STRING(SS_LGUI(SS_TAP(X_C)));
