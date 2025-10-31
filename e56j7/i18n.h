@@ -3,7 +3,6 @@
 #define DE_QUOT S(KC_NUHS)
 #define DE_SCLN S(KC_COMM)
 #define DE_SLSH S(KC_7)
-#define DE_PIPE ALGR(KC_NUBS)
 #define DE_EQL S(KC_0)
 #define DE_EXLM S(KC_1)
 #define DE_AT ALGR(KC_Q)
