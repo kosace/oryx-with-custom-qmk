@@ -11,11 +11,9 @@ enum custom_keycodes {
   HSV_0_255_255,
   HSV_74_255_255,
   HSV_169_255_255,
-  COPY_MACRO_TEST
 };
 
 
-// #define COPY_MACRO_TEST 1
 #define DUAL_FUNC_0 LT(2, KC_9)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -125,13 +123,6 @@ bool rgb_matrix_indicators_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case COPY_MACRO_TEST:
-      // if (record->event.pressed) {
-
-      // SEND_STRING(SS_LGUI(SS_TAP(X_C)));
-      SEND_STRING("test");
-      // }
-      return false;
 
     case DUAL_FUNC_0:
       if (record->tap.count > 0) {
@@ -183,6 +174,13 @@ const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMMA
 const key_override_t semicolon_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_SCLN, 	LSFT(KC_DOT));
 const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_QUOT, 	LSFT(KC_2));
 const key_override_t copy_override = ko_make_basic(MOD_MASK_CTRL, KC_C, LGUI(KC_C));
+const key_override_t paste_override = ko_make_basic(MOD_MASK_CTRL, KC_V, LGUI(KC_V));
+const key_override_t cut_override = ko_make_basic(MOD_MASK_CTRL, KC_X, LGUI(KC_X));
+const key_override_t select_override = ko_make_basic(MOD_MASK_CTRL, KC_A, LGUI(KC_A));
+const key_override_t find_override = ko_make_basic(MOD_MASK_CTRL, KC_F, LGUI(KC_F));
+const key_override_t undo_override = ko_make_basic(MOD_MASK_CTRL, KC_Z, LGUI(KC_Z));
+const key_override_t redo_override = ko_make_basic(MOD_MASK_CTRL, KC_Y, LGUI(KC_Y));
+const key_override_t save_override = ko_make_basic(MOD_MASK_CTRL, KC_S, LGUI(KC_S));
 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
