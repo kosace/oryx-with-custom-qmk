@@ -173,14 +173,16 @@ const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, 	L
 const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, 	KC_NUBS);
 const key_override_t semicolon_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_SCLN, 	LSFT(KC_DOT));
 const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_QUOT, 	LSFT(KC_2));
-const key_override_t copy_override = ko_make_basic(MOD_MASK_CTRL, KC_C, LGUI(KC_C));
-const key_override_t paste_override = ko_make_basic(MOD_MASK_CTRL, KC_V, LGUI(KC_V));
-const key_override_t cut_override = ko_make_basic(MOD_MASK_CTRL, KC_X, LGUI(KC_X));
-const key_override_t select_override = ko_make_basic(MOD_MASK_CTRL, KC_A, LGUI(KC_A));
-const key_override_t find_override = ko_make_basic(MOD_MASK_CTRL, KC_F, LGUI(KC_F));
-const key_override_t undo_override = ko_make_basic(MOD_MASK_CTRL, KC_Z, LGUI(KC_Z));
-const key_override_t redo_override = ko_make_basic(MOD_MASK_CTRL, KC_Y, LGUI(KC_Y));
-const key_override_t save_override = ko_make_basic(MOD_MASK_CTRL, KC_S, LGUI(KC_S));
+
+// mac 
+const key_override_t copy_override = ko_make_basic_with_layer(MOD_MASK_CTRL, KC_C, LGUI(KC_C), 1<<3);
+const key_override_t paste_override = ko_make_basic_with_layer(MOD_MASK_CTRL, KC_V, LGUI(KC_V), 1<<3);
+const key_override_t cut_override = ko_make_basic_with_layer(MOD_MASK_CTRL, KC_X, LGUI(KC_X), 1<<3);
+const key_override_t select_override = ko_make_basic_with_layer(MOD_MASK_CTRL, KC_A, LGUI(KC_A), 1<<3);
+const key_override_t find_override = ko_make_basic_with_layer(MOD_MASK_CTRL, KC_F, LGUI(KC_F), 1<<3);
+const key_override_t undo_override = ko_make_basic_with_layer(MOD_MASK_CTRL, KC_Z, LGUI(KC_Z), 1<<3);
+const key_override_t redo_override = ko_make_basic_with_layer(MOD_MASK_CTRL, KC_Y, LGUI(KC_Y), 1<<3);
+const key_override_t save_override = ko_make_basic_with_layer(MOD_MASK_CTRL, KC_S, LGUI(KC_S), 1<<3);
 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
@@ -191,5 +193,12 @@ const key_override_t *key_overrides[] = {
 	&semicolon_key_override,
   &quot_key_override,
   &copy_override,
+  &paste_override,
+  &cut_override,
+  &select_override,
+  &find_override,
+  &undo_override,
+  &redo_override,
+  &save_override,
 };
 
