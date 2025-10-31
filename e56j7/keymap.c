@@ -157,8 +157,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_ESCAPE, KC_DEL);
 const key_override_t slash_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_SLSH, 	LSFT(KC_MINS));
-const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, 	LSFT(KC_GRV));
-const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, 	KC_GRV);
+const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, 	LSFT(KC_NUBS));
+const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, 	KC_NUBS);
 const key_override_t semicolon_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_SCLN, 	LSFT(KC_DOT));
 const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_QUOT, 	LSFT(KC_2));
 
