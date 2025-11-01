@@ -17,7 +17,6 @@
 #define DE_LBRC ALGR(KC_8)
 #define DE_LCBR ALGR(KC_7)
 #define DE_PLUS KC_RBRC
-#define DE_CIRC KC_GRV
 #define DE_AMPR S(KC_6)
 #define DE_ASTR S(KC_RBRC)
 #define DE_LPRN S(KC_8)
