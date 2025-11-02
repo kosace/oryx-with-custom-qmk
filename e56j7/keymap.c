@@ -8,11 +8,12 @@
 
 enum custom_keycodes {
   RGB_SLD = ZSA_SAFE_RANGE,
+  ST_MACRO_0,
 };
 
 
 
-#define DUAL_FUNC_0 LT(3, KC_C)
+#define DUAL_FUNC_0 LT(13, KC_2)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -31,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [2] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    DE_EQL,         DE_EXLM,        DE_AT,          DE_HASH,        DE_DLR,         DE_PERC,                                        KC_GRAVE,       DE_AMPR,        DE_ASTR,        DE_LPRN,        DE_RPRN,        DE_MINS,        
+    DE_EQL,         DE_EXLM,        DE_AT,          DE_HASH,        DE_DLR,         DE_PERC,                                        ST_MACRO_0,     DE_AMPR,        DE_ASTR,        DE_LPRN,        DE_RPRN,        DE_MINS,        
     KC_DELETE,      DE_AE,          DE_SS,          DE_UE,          DE_OE,          CW_TOGG,                                        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       DE_TILD,        KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DE_LBRC,        DE_LCBR,        DE_PLUS,                                        DE_GRV,         DE_RCBR,        DE_RBRC,        KC_TRANSPARENT, DE_UNDS,        DE_BSLS,        
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
@@ -131,6 +132,11 @@ bool rgb_matrix_indicators_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+    case ST_MACRO_0:
+    if (record->event.pressed) {
+      SEND_STRING(SS_TAP(X_GRAVE)SS_DELAY(1)  SS_TAP(X_SPACE));
+    }
+    break;
 
     case DUAL_FUNC_0:
       if (record->tap.count > 0) {
