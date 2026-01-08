@@ -1,6 +1,6 @@
 #define DE_Y KC_Z
 #define DE_Z KC_Y
-#define DE_QUOT S(KC_NUHS)
+#define DE_DQOT S(KC_2)
 #define DE_SCLN S(KC_COMM)
 #define DE_MINS KC_SLSH
 #define DE_SLSH S(KC_7)
