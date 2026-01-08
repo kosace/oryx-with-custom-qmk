@@ -175,7 +175,7 @@ const key_override_t slash_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_SLSH,
 const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, 	LSFT(KC_NUBS));
 const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, 	KC_NUBS);
 const key_override_t semicolon_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_SCLN, 	LSFT(KC_DOT));
-const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_DQOT, KC_QUOTE);
+const key_override_t quot_key_override = ko_make_basic(MOD_MASK_SHIFT, DE_DQOT, KC_BSLS);
 
 // mac 
 const key_override_t copy_override = ko_make_with_layers(MOD_MASK_CTRL, KC_C, LGUI(KC_C), 1 << 1);
