@@ -2,8 +2,8 @@
 #define DE_Z KC_Y
 #define DE_QUOT S(KC_NUHS)
 #define DE_SCLN S(KC_COMM)
+#define DE_MINS KC_SLSH
 #define DE_SLSH S(KC_7)
-#define DE_PIPE ALGR(KC_NUBS)
 #define DE_EQL S(KC_0)
 #define DE_EXLM S(KC_1)
 #define DE_AT ALGR(KC_Q)
@@ -21,10 +21,8 @@
 #define DE_ASTR S(KC_RBRC)
 #define DE_LPRN S(KC_8)
 #define DE_RPRN S(KC_9)
-#define DE_MINS KC_SLSH
 #define DE_TILD ALGR(KC_RBRC)
-#define DE_GRV S(KC_EQL)
 #define DE_RCBR ALGR(KC_0)
 #define DE_RBRC ALGR(KC_9)
-#define DE_UNDS S(KC_SLSH)
+#define DE_PIPE ALGR(KC_NUBS)
 #define DE_BSLS ALGR(KC_MINS)
