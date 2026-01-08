@@ -14,12 +14,12 @@ enum custom_keycodes {
 
 
 
-#define DUAL_FUNC_0 LT(7, KC_F22)
+#define DUAL_FUNC_0 LT(6, KC_T)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_F6,                                          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,         KC_F12,         
-    KC_ESCAPE,      KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,                                           DE_Z,           KC_U,           KC_I,           KC_O,           KC_P,           DE_QUOT,        
+    KC_ESCAPE,      KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,                                           DE_Z,           KC_U,           KC_I,           KC_O,           KC_P,           DE_DQOT,        
     KC_LEFT_SHIFT,  KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                           KC_H,           KC_J,           KC_K,           KC_L,           DE_SCLN,        KC_RIGHT_SHIFT, 
     MO(3),          DE_Y,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         DE_MINS,        DUAL_FUNC_0,    
                                                     MT(MOD_LCTL, KC_BSPC),LT(2, KC_ENTER),                                LT(2, KC_TAB),  KC_SPACE
