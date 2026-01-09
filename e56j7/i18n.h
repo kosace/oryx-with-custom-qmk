@@ -24,5 +24,6 @@
 #define DE_TILD ALGR(KC_RBRC)
 #define DE_RCBR ALGR(KC_0)
 #define DE_RBRC ALGR(KC_9)
+#define DE_QST S(KC_MINS)
 #define DE_PIPE ALGR(KC_NUBS)
 #define DE_BSLS ALGR(KC_MINS)
