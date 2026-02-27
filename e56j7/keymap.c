@@ -14,7 +14,7 @@ enum custom_keycodes {
 
 
 
-#define DUAL_FUNC_0 LT(6, KC_C)
+#define DUAL_FUNC_0 LT(9, KC_X)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -155,7 +155,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_1:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_GRAVE)SS_DELAY(1)  SS_TAP(X_SPACE));
+      SEND_STRING(SS_LSFT(SS_TAP(X_EQUAL))SS_DELAY(1)  SS_TAP(X_SPACE));
     }
     break;
 
